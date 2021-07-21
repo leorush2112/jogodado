@@ -1,22 +1,16 @@
 public class App {
     public static void main(String[] args) throws Exception {
 
-        Dado dado = new Dado(6);
+        // Instanciando o Objeto Dado passando o numero de lados
+        Dado dado = new Dado(10);
 
-        int[] numeros = new int[3];
+        // Classe sorteador recebe quantidadeDeSorteios e um Dado
+        Sorteador sorteador = new Sorteador(3, dado);
 
-        int soma = 0;
+        Resultado resultado = sorteador.jogarDado();
 
-        for (int i = 0; i < 3; i++) {
-            numeros[i] = dado.sortear();
-        }
+        resultado.mostrarNumeros();
 
-        for (int numero : numeros) {
-            soma += numero;
-        }
-
-        System.out.println("Os numeros sorteados são: " + numeros[0] + ", " + numeros[1] + ", " + numeros[2]);
-        System.out.println("A soma é: " + soma);
     }
 
 }

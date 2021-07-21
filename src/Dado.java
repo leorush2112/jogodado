@@ -13,4 +13,5 @@ public class Dado {
         double numeroArredondado = Math.ceil(sorteio);
         return (int) numeroArredondado; // casting
     }
+
 }
